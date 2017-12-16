@@ -1,0 +1,371 @@
+<?php
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Bookstore</title>
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700|" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="fonts/lineo-icon/style.css" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="style.css">
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+
+	</head>
+
+
+	<body class="slider-collapse">
+		
+		<div id="site-content">
+			<div class="site-header">
+				<div class="container">
+					<a href="index.html" id="branding">
+						<!-- <img src="images/logo.png" alt="" class="logo"> -->
+						<div class="logo-text">
+							<h1 class="site-title">Internom</h1>
+							<small class="site-description">Tagline goes here</small>
+						</div>
+					</a> <!-- #branding -->
+
+					<div class="right-section pull-right">
+						<a href="cart.html" class="cart"><i class="icon-cart"></i> Сагс хоосон байна</a>
+						<a href="#" class="login-button">Нэвтрэх/Бүртгүүлэх</a>
+					</div> <!-- .right-section -->
+
+					<div class="main-navigation">
+						<button class="toggle-menu"><i class="fa fa-bars"></i></button>
+						<ul class="menu">
+							<li class="menu-item home current-menu-item"><a href="index.html"><i class="icon-home"></i></a></li>
+							<li class="menu-item"><a href="products.html">Нүүр</a></li>
+							<li class="menu-item"><a href="products.html">Эрэлт ихтэй ном</a></li>
+							<li class="menu-item"><a href="products.html">Нийтийн ном</a></li>
+							<li class="menu-item"><a href="products.html">Хүүхдийн ном</a></li>
+						
+						</ul> <!-- .menu -->
+						<div class="search-form">
+							<label><img src="images/icon-search.png"></label>
+							<input type="text" placeholder="Хайлт...">
+						</div> <!-- .search-form -->
+
+						<div class="mobile-navigation"></div> <!-- .mobile-navigation -->
+					</div> <!-- .main-navigation -->
+				</div> <!-- .container -->
+			</div> <!-- .site-header -->
+
+			<div class="home-slider">
+				<ul class="slides">
+					<li data-bg-image="images/slide1.jpg">
+						<div class="container">
+							<div class="slide-content">
+								<h2 class="slide-title">Ногоон нүдэн лам 2</h2>
+								<small class="slide-subtitle">Тун удахгүй</small>
+								
+								<p>Монголын түүхийн нэгэн хар бараан хэсэг бол яахын аргагүй 1930-аад оны их хэлмэглүүлэлт билээ. Олон мянган эгэл лам нарыг хэлмэгдүүлж, хоморголон хороосон хэмээх аймшигт түүхийг уран зохиолын хэлээр найруулан бичиж бүтээл болгож, нөгөө талаас залууст үүх түүхээ мэдэх эх сурвалж болсон нь “Ногоон нүдэн лам” роман. ССАЖ-ын сайд асан Ц.Оюунгэрэл эл романыхаа анхны дэвтрийг 2008 онд гаргаж, гарсан даруйдаа л эрэлт үүсгэсээр өдийг хүрсэн. Өнгөрсөн оноос эхэлж хоёрдугаар дэвтэр нь гарна гэсэн сургаар уншигч олны дунд багагүй хүлээлт үүсээд байгаа билээ. 2 дугаар дэвтэр гарна гэсэн нь сураг төдий байсан бол номын зохиолч өөрөө албан ёсоор товоо зарлаж, “Ногоон нүдэн лам-2” ирэх 12-р сарын 11нд нээлтээ хийх гэнэ.</p>
+								
+								<a href="cart.html" class="button">Сагсанд нэмэх</a>
+							</div>
+
+							<img src="images/nogonnuden.jpg" class="slide-image">
+						</div>
+					</li>
+					<li data-bg-image=" images/slide2.jpg">
+						<div class="container">
+							<div class="slide-content">
+								<h3 class="slide-title">Харри Поттер</h3>
+								<small class="slide-subtitle">Тун удахгүй худалдаанд</small>
+								
+								<p>Их Британийн зохиолч Ж.К.Роулингийн бичсэн өсвөр насны хүү Харри Поттерын тухай өгүүлсэн долоон цуврал, дэлхийд алдартай зохиолын эхний хоёр боть албан ёсны эрхтэйгээр уншигчдын гарт хүрэхэд бэлэн боллоо.</p>
+								
+								<a href="cart.html" class="button">Сагсанд нэмэх</a>
+							</div>
+
+							<img src="images/harrypoter.jpg" class="slide-image">
+						</div>
+					</li>
+				<!-- 	<li data-bg-image="images/slide3.jpg">
+						<div class="container">
+							<div class="slide-content">
+								<h2 class="slide-title">Kill Zone 3</h2>
+								<small class="slide-subtitle">$190.00</small>
+								
+								<p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
+								
+								<a href="cart.html" class="button">Add to cart</a>
+							</div>
+
+							<img src="dummy/game-cover-3.jpg" class="slide-image">
+						</div>
+					</li> -->
+				</ul> <!-- .slides -->
+			</div> <!-- .home-slider -->
+
+			<main class="main-content">
+				<div class="container">
+					<div class="page">
+						<section>
+							<header>
+								<h2 class="section-title">Шинэ ном</h2>
+								<a href="#" class="all">Бүгдийг харах</a>
+							</header>
+
+								
+						<div class="product-list">
+								
+							
+								<div class="product">
+									<div class="inner-product">
+										<div class="figure-image">
+											<a href="single.html"><img src="images/nuutsaral.jpg" alt="Game 1"></a>
+										</div>
+										<h3 class="product-title"><a href="#">Нууц аралын эзэд</a></h3>
+										<p>Тэмүүлэн өөрийн найзуудтайгаа хотоос гарч чадлаа. Тэд Тэрэлжийн үзэсгэлэнт байгаль, эртний агуй, мэлхий хад, зэлүүд суурин зэрэг олон сонирхолтой ...</p>
+										<a href="#" class="button">Сагсанд нэмэх</a>
+										<a href="#" class="button muted">Дэлгэрэнгүй</a>
+									</div>
+								</div> <!-- .product -->
+								
+								<div class="product">
+									<div class="inner-product">
+										<div class="figure-image">
+											<a href="single.html"><img src="images/nuutsaral.jpg" alt="Game 1"></a>
+										</div>
+										<h3 class="product-title"><a href="#">Нууц аралын эзэд</a></h3>
+										<p>Тэмүүлэн өөрийн найзуудтайгаа хотоос гарч чадлаа. Тэд Тэрэлжийн үзэсгэлэнт байгаль, эртний агуй, мэлхий хад, зэлүүд суурин зэрэг олон сонирхолтой ...</p>
+										<a href="#" class="button">Сагсанд нэмэх</a>
+										<a href="#" class="button muted">Дэлгэрэнгүй</a>
+									</div>
+								</div> <!-- .product -->
+								
+								
+								<div class="product">
+									<div class="inner-product">
+										<div class="figure-image">
+											<a href="single.html"><img src="images/nuutsaral.jpg" alt="Game 1"></a>
+										</div>
+										<h3 class="product-title"><a href="#">Нууц аралын эзэд</a></h3>
+										<p>Тэмүүлэн өөрийн найзуудтайгаа хотоос гарч чадлаа. Тэд Тэрэлжийн үзэсгэлэнт байгаль, эртний агуй, мэлхий хад, зэлүүд суурин зэрэг олон сонирхолтой ...</p>
+										<a href="#" class="button">Сагсанд нэмэх</a>
+										<a href="#" class="button muted">Дэлгэрэнгүй</a>
+									</div>
+								</div> <!-- .product -->
+								
+								
+								<div class="product">
+									<div class="inner-product">
+										<div class="figure-image">
+											<a href="single.html"><img src="images/nuutsaral.jpg" alt="Game 1"></a>
+										</div>
+										<h3 class="product-title"><a href="#">Нууц аралын эзэд</a></h3>
+										<p>Тэмүүлэн өөрийн найзуудтайгаа хотоос гарч чадлаа. Тэд Тэрэлжийн үзэсгэлэнт байгаль, эртний агуй, мэлхий хад, зэлүүд суурин зэрэг олон сонирхолтой ...</p>
+										<a href="#" class="button">Сагсанд нэмэх</a>
+										<a href="#" class="button muted">Дэлгэрэнгүй</a>
+									</div>
+								</div> <!-- .product -->
+								
+						</div> <!-- .product-list -->
+
+
+						</section>
+
+						<section>
+							<header>
+								<h2 class="section-title">Эрэлт ихтэй ном</h2>
+								<a href="#" class="all">Бүгдийг харах</a>
+							</header>
+
+							<div class="product-list">
+								
+								<div class="product">
+									<div class="inner-product">
+										<div class="figure-image">
+											<a href="single.html"><img src="images/tumurhatan.jpg" alt="book 1"></a>
+										</div>
+										<h3 class="product-title"><a href="#">Төмөр хатан</a></h3>
+										<small class="price">12000</small>
+										<p>Хана туурга хэмхэлж нураагаад гараад ирэх нь үү гэлтэй хаалга цонхоор зад шуургалан хашигичих бүсгүй хүний догшин дуу...</p>
+										<a href="cart.html" class="button">Сагсанд нэмэх</a>
+										<a href="#" class="button muted">Дэлгэрэнгүй</a>
+									</div>
+								</div> <!-- .product -->
+								
+								
+								<div class="product">
+									<div class="inner-product">
+										<div class="figure-image">
+											<a href="single.html"><img src="images/tumurhatan.jpg" alt="book 1"></a>
+										</div>
+										<h3 class="product-title"><a href="#">Төмөр хатан</a></h3>
+										<small class="price">12000</small>
+										<p>Хана туурга хэмхэлж нураагаад гараад ирэх нь үү гэлтэй хаалга цонхоор зад шуургалан хашигичих бүсгүй хүний догшин дуу...</p>
+										<a href="cart.html" class="button">Сагсанд нэмэх</a>
+										<a href="#" class="button muted">Дэлгэрэнгүй</a>
+									</div>
+								</div> <!-- .product -->
+								
+								
+							<div class="product">
+									<div class="inner-product">
+										<div class="figure-image">
+											<a href="single.html"><img src="images/tumurhatan.jpg" alt="book 1"></a>
+										</div>
+										<h3 class="product-title"><a href="#">Төмөр хатан</a></h3>
+										<small class="price">12000</small>
+										<p>Хана туурга хэмхэлж нураагаад гараад ирэх нь үү гэлтэй хаалга цонхоор зад шуургалан хашигичих бүсгүй хүний догшин дуу...</p>
+										<a href="cart.html" class="button">Сагсанд нэмэх</a>
+										<a href="#" class="button muted">Дэлгэрэнгүй</a>
+									</div>
+								</div> <!-- .product -->
+								
+								<div class="product">
+									<div class="inner-product">
+										<div class="figure-image">
+											<a href="single.html"><img src="images/tumurhatan.jpg" alt="book 1"></a>
+										</div>
+										<h3 class="product-title"><a href="#">Төмөр хатан</a></h3>
+										<small class="price">12000</small>
+										<p>Хана туурга хэмхэлж нураагаад гараад ирэх нь үү гэлтэй хаалга цонхоор зад шуургалан хашигичих бүсгүй хүний догшин дуу...</p>
+										<a href="cart.html" class="button">Сагсанд нэмэх</a>
+										<a href="#" class="button muted">Дэлгэрэнгүй</a>
+									</div>
+								</div> <!-- .product -->
+								
+								
+							</div> <!-- .product-list -->
+
+						</section>
+					</div>
+				</div> <!-- .container -->
+			</main> <!-- .main-content -->
+
+			
+			<div class="site-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2">
+							<div class="widget">
+								<h3 class="widget-title">Internom</h3>
+								<ul class="no-bullet">
+									<li><a href="#">Бэстселлэр</a></li>
+									<li><a href="#">Шинэ ном</a></li>
+									<li><a href="#">Арга хэмжээ</a></li>
+									<!-- <li><a href="#">Privacy Policy</a></li>
+									<li><a href="#">Contact</a></li> -->
+								</ul>
+							</div> <!-- .widget -->
+						</div> <!-- column -->
+						<div class="col-md-2">
+							<div class="widget">
+								<h3 class="widget-title">Бидний тухай</h3>
+								<ul class="no-bullet">
+									<li><a href="#">Бидний тухай</a></li>
+									<li><a href="#">Манай салбарууд</a></li>
+									<li><a href="#">Холбоо бармх</a></li>
+									<li><a href="#">Үйлчилгээний нөхцөл</a></li>
+									
+								</ul>
+							</div> <!-- .widget -->
+						</div> <!-- column -->
+						<div class="col-md-2">
+							<div class="widget">
+								<h3 class="widget-title">Тусламж</h3>
+								<ul class="no-bullet">
+									<li><a href="#">Захиалга хийх</a></li>
+									<li><a href="#">Төлбөрийн хэрэгслүүд</a></li>
+									
+								</ul>
+							</div> <!-- .widget -->
+						</div> <!-- column -->
+						<!-- <div class="col-md-6">
+							<div class="widget">
+								<h3 class="widget-title">Join our newsletter</h3>
+								<form action="#" class="newsletter-form">
+									<input type="text" placeholder="Enter your email...">
+									<input type="submit" value="Subsribe">
+								</form>
+							</div> <!-- .widget -->
+						</div> <!-- column -->
+ -->					</div><!-- .row -->
+
+					<div class="colophon">
+						<div class="copy">Copyright 2017 </div>
+						<div class="social-links square">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+							<a href="#"><i class="fa fa-pinterest"></i></a>
+						</div> <!-- .social-links -->
+					</div> <!-- .colophon -->
+				</div> <!-- .container -->
+		</div>
+
+		<div class="overlay"></div>
+
+		<div class="auth-popup popup">
+			<a href="#" class="close"><i class="fa fa-times"></i></a>
+			<div class="row">
+				<div class="col-md-6">
+					<h2 class="section-title">Нэвтрэх</h2>
+					<form action="#">
+						<input type="text" placeholder="Username...">
+						<input type="password" placeholder="Password...">
+						<input type="submit" value="Login">
+					</form>
+				</div> <!-- .column -->
+				<div class="col-md-6">
+					<h2 class="section-title">Бүртгүүлэх</h2>
+					<form id="userCreateForm" action="" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="action" value="create">
+						<input type="text" name="firstName"  placeholder="FirstName...">
+						<input type="text" name="lastName"  placeholder="LastName...">
+						<input type="text" name="userName"  placeholder="Username...">
+						<input type="text" name="email"  placeholder="Email address...">
+						<!-- <input type="file" name="pfile" id="pfile"  /> -->
+						<input type="submit" value="Бүртгүүлэх">
+					</form>
+				</div> <!-- .column -->
+			</div> <!-- .row -->
+		</div> <!-- .auth-popup -->
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		<script>
+			$(document).ready(function(){
+			    $('#userCreateForm').submit(function(){
+			        $.ajax({
+			            type: 'POST',
+			            url: 'services/user.php', 
+			            data: $(this).serialize()
+			        })
+			        .done(function(data){
+			             alert(data);
+			             console.log(data);
+			             
+			        })
+			        .fail(function() {
+			         
+			            // just in case posting your form failed
+			            alert( "Posting failed." );
+			             
+			        });
+			 
+			        // to prevent refreshing the whole page page
+			        return false;
+			 
+			    });
+			});
+		</script>
+	</body>
+
+</html>
+?>
