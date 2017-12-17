@@ -77,7 +77,19 @@ if(isset($_POST['datatype']) && $_POST['datatype']=='data'){
 				
 				# code...
 				break;
-			
+            case 'adminbooklist':
+                $sql = "SELECT * FROM book";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        $new_array[] = $row;
+                    }
+                    echo json_encode($new_array);
+                } else {
+                    echo "0";
+                }
+            break;
 			default:
 				# code...
 				break;

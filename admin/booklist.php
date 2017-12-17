@@ -37,43 +37,15 @@
                 <table class="table">
                   <thead>
                     <tr>
-                      <th>#</th>
-                      <th>Table heading</th>
-                      <th>Table heading</th>
-                      <th>Table heading</th>
-                      <th>Table heading</th>
-                      <th>Table heading</th>
-                      <th>Table heading</th>
+                      <th>Id</th>
+                      <th>Нэр</th>
+                      <th>Үнэ</th>
+                      <th>Тоо</th>
+                      <th>Зохиолч</th>
+                      <th>Үйлдэл</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                    </tr>
+                  <tbody id="booklist">
                   </tbody>
                 </table>
               </div>
@@ -91,7 +63,36 @@
 
     <script>
         $(document).ready(function () {
+          $.ajax({
+                type: "GET",
+				        url: "../services/book.php?",
+				        data: "type=adminbooklist",
+				        success: function (data) {
+                  data = $.parseJSON(data);	
 
+				        	$.each(data, function(i, item) {
+                    $("#booklist").append('<tr>'+
+                      '<td>'+item.id+'</td>'+
+                      '<td>'+item.name+'</td>'+
+                      '<td>'+item.price+'</td>'+
+                      '<td>'+item.quantity+'</td>'+
+                      '<td>'+item.author+'</td>'+
+                      '<td></td>'+
+                    '</tr>');
+							    console.log(i,item);
+							})
+
+				        }
+			        })
+			        .done(function(data){
+			             
+			        })
+			        .fail(function() {
+			         
+			            // just in case posting your form failed
+			            alert( "Posting failed." );
+			             
+			        });
         })
     </script>
 
