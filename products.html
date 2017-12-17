@@ -54,8 +54,8 @@
 							<li class="menu-item home current-menu-item"><a href="index.html"><i class="icon-home"></i></a></li>
 							<li class="menu-item"><a href="products.html">Ном</a></li>
 							<li class="menu-item"><a href="products.html">Эрэлт ихтэй ном</a></li>
-							<li class="menu-item"><a href="products.html">Нийтийн ном</a></li>
-							<li class="menu-item"><a href="products.html">Хүүхдийн ном</a></li>
+							<li class="menu-item"><a href="about.html">Бидний тухай</a></li>
+							<li class="menu-item"><a href="#">Холбоо барих</a></li>
 							
 						</ul> <!-- .menu -->
 						<div class="search-form">
@@ -90,11 +90,8 @@
 								</span>
 								<span>
 									<label>Төрөл</label>
-									<select name="#">
-										<option value="#">Бүгдийг харах</option>
-										<option value="#">Уран зохиол</option>
-										<option value="#">Роман</option>
-										<option value="#">Хүүхдийн</option>
+									<select id="categoriesSelect" name="category">
+									<option value="0">Бүгдийг харуулах</option>
 									</select>
 								</span>
 								<span>
@@ -235,7 +232,7 @@
 				$.ajax({
 			            type: "GET",
 				        url: "services/book.php?",
-				        data: "type=getAllBooks",
+				        data: "type=getAllBooks&category="+$("#categoriesSelect").val(),
 				        success: function (data) {
 				        	data = $.parseJSON(data);	
 
@@ -261,11 +258,66 @@
 			             
 			        })
 			        .fail(function() {
-			         
-			            // just in case posting your form failed
 			            alert( "Posting failed." );
 			             
 			        });
+
+			        $.ajax({
+			            type: "GET",
+				        url: "services/book.php?",
+				        data: "type=getCategories",
+				        success: function (data) {
+				        	data = $.parseJSON(data);	
+
+				        	$.each(data, function(i, item) {
+				        		$("#categoriesSelect").append('<option value="'+item.id+'">'+item.category_name+'</option>');
+							})
+
+				        }
+			        }).fail(function() {
+			            alert( "Posting failed." );
+			        });
+
+
+			        $( "#categoriesSelect" ).change(function() {
+					  $.ajax({
+			            type: "GET",
+				        url: "services/book.php?",
+				        data: "type=ereltbooks&category="+$("#categoriesSelect").val(),
+				        success: function (data) {
+				        	debugger;
+				        	data = $.parseJSON(data);	
+
+$("#allBooks").html('');
+				        	$.each(data, function(i, item) {
+
+				        		
+				        		$("#allBooks").append('<div class="product">'+
+									'<div class="inner-product">'+
+										'<div class="figure-image">'+
+											'<a href="single.html"><img src="images/nuutsaral.jpg"></a>'+
+										'</div>'+
+										'<h3 class="product-title"><a href="#">'+item.name+'</a></h3>'+
+										'<h3 class="product-description"><a href="#">'+item.description+'</a></h3>'+
+										'<a href="#" >Үнэ:'+item.price+'</a>'+
+										'<a href="#" class="button basket-button">Сагсанд нэмэх</a>'+
+										'<a href="#" class="button muted">Дэлгэрэнгүй</a>'+
+									'</div>'+
+								'</div> ');
+							    console.log(i,item);
+							})
+
+				        }
+			        })
+			        .done(function(data){
+			             
+			        })
+			        .fail(function() {
+			            alert( "Posting failed." );
+			             
+			        });
+					});
+
 			});
 		</script>
 		

@@ -29,7 +29,7 @@ if(isset($_POST['datatype']) && $_POST['datatype']=='data'){
         echo "Error: " . $sql  . "<br>" . $conn->error;
     }
 }else{
-    if(isset($_POST) == true){
+    if(isset($_POST) == true && isset($_FILES["file"]["name"])){
         //generate unique file name
         $fileName = time().'_'.basename($_FILES["file"]["name"]);
         
@@ -74,8 +74,40 @@ if(isset($_POST['datatype']) && $_POST['datatype']=='data'){
 				} else {
 				    echo "0 results";
 				}
-				
-				# code...
+                # code...
+                break;
+
+            case 'getCategories':
+                $sql = "SELECT * FROM category";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                        $new_array[] = $row;
+                    }
+                    echo json_encode($new_array);
+                } else {
+                    echo "0 results";
+                }
+                break;
+
+			case 'ereltbooks':
+                $sql = "SELECT * FROM book";
+                if(isset($_GET['category']) && $_GET['category'] !=0){
+                    $sql = $sql." where categoryId =".$_GET['category'];
+                }
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        $new_array[] = $row;
+                    }
+                    echo json_encode($new_array);
+                } else {
+                    echo "0";
+                }
+                
 				break;
             case 'adminbooklist':
                 $sql = "SELECT * FROM book";
@@ -91,7 +123,6 @@ if(isset($_POST['datatype']) && $_POST['datatype']=='data'){
                 }
             break;
 			default:
-				# code...
 				break;
 		}
 		$conn->close();
