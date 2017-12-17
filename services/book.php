@@ -1,6 +1,5 @@
 <?php
-	include_once "../db/dbConfig.php";
-
+	
 
 	include_once "../db/dbConfig.php";
 	if(isset($_GET['type'])){
