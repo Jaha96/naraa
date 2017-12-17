@@ -33,8 +33,7 @@
               <header class="panel-heading">
                 Responsive tables
               </header>
-              <div class="table-responsive">
-                <table class="table">
+              <table class="table table-striped table-advance table-hover">
                   <thead>
                     <tr>
                       <th>Id</th>
@@ -45,10 +44,9 @@
                       <th>Үйлдэл</th>
                     </tr>
                   </thead>
-                  <tbody id="booklist">
-                  </tbody>
-                </table>
-              </div>
+                <tbody id="booklist">
+                </tbody>
+              </table>
 
             </section>
           </div>
@@ -77,9 +75,13 @@
                       '<td>'+item.price+'</td>'+
                       '<td>'+item.quantity+'</td>'+
                       '<td>'+item.author+'</td>'+
-                      '<td></td>'+
+                      '<td>'+
+                      '<div class="btn-group">'+
+                        '<a class="btn btn-success"><i class="icon_check_alt2"></i></a>'+
+                        '<a class="btn btn-danger deleteButton" value="'+item.id+'"><i class="icon_close_alt2"></i></a>'+
+                      '</div>'+
+                    '</td>'+
                     '</tr>');
-							    console.log(i,item);
 							})
 
 				        }
@@ -94,6 +96,11 @@
 			             
 			        });
         })
+
+        $( ".deleteButton" ).click(function() {
+                alert( "Handler for .click() called." );
+              });
+       
     </script>
 
 </body>
