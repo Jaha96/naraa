@@ -14,6 +14,7 @@ if ($conn->connect_error) {
 } 
 
 mysqli_set_charset($conn,"utf8");
+mysqli_query('set names utf8');
 
 // $connect = mysql_connect("localhost:78","root","") or die('Database Not Connected. Please Fix the Issue! ' . mysql_error());
 // mysql_select_db("onlinebookstore", $connect);

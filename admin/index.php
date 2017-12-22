@@ -181,6 +181,7 @@
               $("#dropBox").html("Таны оруулсан зургын хэмжээ их байна (>1 MB)");
             } else {
               //append the uploadable file to FormData object
+              debugger;
               data.append('file', file, file.name);
 
               //create a new XMLHttpRequest

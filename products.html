@@ -53,7 +53,7 @@
 						<ul class="menu">
 							<li class="menu-item home current-menu-item"><a href="index.html"><i class="icon-home"></i></a></li>
 							<li class="menu-item"><a href="products.html">Ном</a></li>
-							<li class="menu-item"><a href="products.html">Эрэлт ихтэй ном</a></li>
+							<!-- <li class="menu-item"><a href="products.html">Эрэлт ихтэй ном</a></li> -->
 							<li class="menu-item"><a href="about.html">Бидний тухай</a></li>
 							<li class="menu-item"><a href="#">Холбоо барих</a></li>
 							
@@ -82,9 +82,9 @@
 							<div class="filter">
 								<span>
 									<label>Эрэмбэлэх:</label>
-									<select name="#">
-										<option value="#">Үнэ ихээс бага</option>
-										<option value="#">Үнэ багаас их</option>
+									<select id="sortSelect" name="sort">
+										<option value="1">Үнэ ихээс бага</option>
+										<option value="2">Үнэ багаас их</option>
 										<!-- <option value="#">Lowest price</option> -->
 									</select>
 								</span>
@@ -206,17 +206,17 @@
 					<form action="#">
 						<input type="text" placeholder="Username...">
 						<input type="password" placeholder="Password...">
-						<input type="submit" value="Login">
+						<input type="submit" value="Нэвтрэх">
 					</form>
 				</div> <!-- .column -->
 				<div class="col-md-6">
 					<h2 class="section-title">Бүртгүүлэх</h2>
 					<form id="userCreateForm" action="" enctype="multipart/form-data" method="post">
 						<input type="hidden" name="action" value="create">
-						<input type="text" name="firstName" value="Naraa" placeholder="FirstName...">
-						<input type="text" name="lastName" value="last" placeholder="LastName...">
-						<input type="text" name="userName" value="naraa_99" placeholder="Username...">
-						<input type="text" name="email" value="admin@gmail.com" placeholder="Email address...">
+						<input type="text" name="firstName"  placeholder="FirstName...">
+						<input type="text" name="lastName" placeholder="LastName...">
+						<input type="text" name="userName"  placeholder="Username...">
+						<input type="text" name="email"  placeholder="Email address...">
 						<!-- <input type="file" name="pfile" id="pfile"  /> -->
 						<input type="submit" value="Бүртгүүлэх">
 					</form>
@@ -234,19 +234,20 @@
 				        url: "services/book.php?",
 				        data: "type=getAllBooks&category="+$("#categoriesSelect").val(),
 				        success: function (data) {
+				        	debugger;
 				        	data = $.parseJSON(data);	
 
 				        	$.each(data, function(i, item) {
 				        		$("#allBooks").append('<div class="product">'+
 									'<div class="inner-product">'+
 										'<div class="figure-image">'+
-											'<a href="single.html"><img src="images/nuutsaral.jpg"></a>'+
+											'<a href="#"><img src="uploads/'+item.image+'"></a>'+
 										'</div>'+
 										'<h3 class="product-title"><a href="#">'+item.name+'</a></h3>'+
 										'<h3 class="product-description"><a href="#">'+item.description+'</a></h3>'+
 										'<a href="#" >Үнэ:'+item.price+'</a>'+
 										'<a href="#" class="button basket-button">Сагсанд нэмэх</a>'+
-										'<a href="#" class="button muted">Дэлгэрэнгүй</a>'+
+										'<a href="single.html" class="button muted">Дэлгэрэнгүй</a>'+
 									'</div>'+
 								'</div> ');
 							    console.log(i,item);
@@ -285,17 +286,17 @@
 				        url: "services/book.php?",
 				        data: "type=ereltbooks&category="+$("#categoriesSelect").val(),
 				        success: function (data) {
-				        	debugger;
+			
 				        	data = $.parseJSON(data);	
 
-$("#allBooks").html('');
+							$("#allBooks").html('');
 				        	$.each(data, function(i, item) {
 
 				        		
 				        		$("#allBooks").append('<div class="product">'+
 									'<div class="inner-product">'+
 										'<div class="figure-image">'+
-											'<a href="single.html"><img src="images/nuutsaral.jpg"></a>'+
+											'<a href="#"><img src="uploads/'+item.image+'"></a>'+ item.image +
 										'</div>'+
 										'<h3 class="product-title"><a href="#">'+item.name+'</a></h3>'+
 										'<h3 class="product-description"><a href="#">'+item.description+'</a></h3>'+
@@ -318,6 +319,46 @@ $("#allBooks").html('');
 			        });
 					});
 
+
+			        $( "#sortSelect" ).change(function() {
+					  $.ajax({
+			            type: "GET",
+				        url: "services/book.php?",
+				        data: "type=sortBooks&sort="+$("#sortSelect").val(),
+				        success: function (data) {
+				        	debugger;
+				        	data = $.parseJSON(data);	
+
+							$("#allBooks").html('');
+				        	$.each(data, function(i, item) {
+
+				        		
+				        		$("#allBooks").append('<div class="product">'+
+									'<div class="inner-product">'+
+										'<div class="figure-image">'+
+												'<a href="#"><img src="uploads/'+item.image+'"></a>'+
+										'</div>'+
+										'<h3 class="product-title"><a href="#">'+item.name+'</a></h3>'+
+										'<h3 class="product-description"><a href="#">'+item.description+'</a></h3>'+
+										'<a href="#" >Үнэ:'+item.price+'</a>'+
+										'<a href="#" class="button basket-button">Сагсанд нэмэх</a>'+
+										'<a href="#" class="button muted">Дэлгэрэнгүй</a>'+
+									'</div>'+
+								'</div> ');
+							    console.log(i,item);
+							})
+
+				        }
+			        })
+			        .done(function(data){
+			             
+			        })
+			        .fail(function() {
+			            alert( "Posting failed." );
+			             
+			        });
+					});
+		
 			});
 		</script>
 		

@@ -109,9 +109,38 @@ if(isset($_POST['datatype']) && $_POST['datatype']=='data'){
                 }
                 
 				break;
+
+            // case 'sortBooks':
+
+            // if(isset($_GET['sort']){
+            //      if($_GET['sort']==2){
+            //          $sql = "SELECT * FROM book order by price DESC";
+            //      }else{
+            //         $sql = "SELECT * FROM book order by price ASC";  }
+
+            //         $result = $conn->query($sql);
+
+            //         if ($result->num_rows > 0) {
+            //             while($row = $result->fetch_assoc()) {
+            //                 $new_array[] = $row;
+            //             }
+            //             echo json_encode($new_array);
+            //         } else {
+            //             echo "0";
+            //         }
+            //     }else{
+            //         echo "0";
+            //     }
+                    
+                    break;
 			
 			default:
 				break;
+
+           
+
+            
+
 		}
 		$conn->close();
 	}
