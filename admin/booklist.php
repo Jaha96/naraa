@@ -33,50 +33,20 @@
               <header class="panel-heading">
                 Responsive tables
               </header>
-              <div class="table-responsive">
-                <table class="table">
+              <table class="table table-striped table-advance table-hover">
                   <thead>
                     <tr>
-                      <th>#</th>
-                      <th>Table heading</th>
-                      <th>Table heading</th>
-                      <th>Table heading</th>
-                      <th>Table heading</th>
-                      <th>Table heading</th>
-                      <th>Table heading</th>
+                      <th>Id</th>
+                      <th>Нэр</th>
+                      <th>Үнэ</th>
+                      <th>Тоо</th>
+                      <th>Зохиолч</th>
+                      <th>Үйлдэл</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                <tbody id="booklist">
+                </tbody>
+              </table>
 
             </section>
           </div>
@@ -91,8 +61,46 @@
 
     <script>
         $(document).ready(function () {
+          $.ajax({
+                type: "GET",
+				        url: "../services/book.php?",
+				        data: "type=adminbooklist",
+				        success: function (data) {
+                  data = $.parseJSON(data);	
 
+				        	$.each(data, function(i, item) {
+                    $("#booklist").append('<tr>'+
+                      '<td>'+item.id+'</td>'+
+                      '<td>'+item.name+'</td>'+
+                      '<td>'+item.price+'</td>'+
+                      '<td>'+item.quantity+'</td>'+
+                      '<td>'+item.author+'</td>'+
+                      '<td>'+
+                      '<div class="btn-group">'+
+                        '<a class="btn btn-success"><i class="icon_check_alt2"></i></a>'+
+                        '<a class="btn btn-danger deleteButton" value="'+item.id+'"><i class="icon_close_alt2"></i></a>'+
+                      '</div>'+
+                    '</td>'+
+                    '</tr>');
+							})
+
+				        }
+			        })
+			        .done(function(data){
+			             
+			        })
+			        .fail(function() {
+			         
+			            // just in case posting your form failed
+			            alert( "Posting failed." );
+			             
+			        });
         })
+
+        $( ".deleteButton" ).click(function() {
+                alert( "Handler for .click() called." );
+              });
+       
     </script>
 
 </body>

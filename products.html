@@ -1,178 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-		
-		<title>Bookstore</title>
 
-		<!-- Loading third party fonts -->
-		<link href="http://fonts.googleapis.com/css?family=Roboto:100,400,700|" rel="stylesheet" type="text/css">
-		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
-		<link href="fonts/lineo-icon/style.css" rel="stylesheet" type="text/css">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 
-		<!-- Loading main css file -->
-		<link rel="stylesheet" href="style.css">
-		
-		<!--[if lt IE 9]>
+	<title>Bookstore</title>
+
+	<!-- Loading third party fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Roboto:100,400,700|" rel="stylesheet" type="text/css">
+	<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="fonts/lineo-icon/style.css" rel="stylesheet" type="text/css">
+
+	<!-- Loading main css file -->
+	<link rel="stylesheet" href="style.css">
+
+	<!--[if lt IE 9]>
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
-		<style type="text/css">
-			.basket-button{
-				display: block;
-    			margin-top: 10px;
-			}
-		</style>
+	<style type="text/css">
+		.basket-button {
+			display: block;
+			margin-top: 10px;
+		}
+	</style>
 
-	</head>
+</head>
 
 
-	<body>
-		
-		<div id="site-content">
-			<div class="site-header">
-				<div class="container">
-					<a href="index.html" id="branding">
-						<img src="images/logo.png" alt="" class="logo">
-						<div class="logo-text">
-							<h1 class="site-title">Online Book Store</h1>
-							<small class="site-description">Tagline goes here</small>
-						</div>
-					</a> <!-- #branding -->
+<body>
 
-					<div class="right-section pull-right">
-						<a href="cart.html" class="cart"><i class="icon-cart"></i>Сагс хоосон байна</a>
-						<a href="#">My Account</a>
-						<a href="#">Logout <small>(John Smith)</small></a>
-					</div> <!-- .right-section -->
-
-					<div class="main-navigation">
-						<button class="toggle-menu"><i class="fa fa-bars"></i></button>
-						<ul class="menu">
-							<li class="menu-item home current-menu-item"><a href="index.html"><i class="icon-home"></i></a></li>
-							<li class="menu-item"><a href="products.html">Ном</a></li>
-							<!-- <li class="menu-item"><a href="products.html">Эрэлт ихтэй ном</a></li> -->
-							<li class="menu-item"><a href="about.html">Бидний тухай</a></li>
-							<li class="menu-item"><a href="#">Холбоо барих</a></li>
-							
-						</ul> <!-- .menu -->
-						<div class="search-form">
-							<label><img src="images/icon-search.png"></label>
-							<input type="text" placeholder="Хайлт...">
-						</div> <!-- .search-form -->
-
-						<div class="mobile-navigation"></div> <!-- .mobile-navigation -->
-					</div> <!-- .main-navigation -->
-
-					<div class="breadcrumbs">
-						<div class="container">
-							<a href="index.html">Нүүр</a>
-							<!-- <span>Play Station Games</span> -->
-						</div>
+	<div id="site-content">
+		<div class="site-header">
+			<div class="container">
+				<a href="index.html" id="branding">
+					<img src="images/logo.png" alt="" class="logo">
+					<div class="logo-text">
+						<h1 class="site-title">Online Book Store</h1>
+						<small class="site-description">Tagline goes here</small>
 					</div>
+				</a>
+				<!-- #branding -->
 
-				</div> <!-- .container -->
-			</div> <!-- .site-header -->
-			<main class="main-content">
-				<div class="container">
-					<div class="page">
-						<div class="filter-bar">
-							<div class="filter">
-								<span>
-									<label>Эрэмбэлэх:</label>
-									<select id="sortSelect" name="sort">
-										<option value="1">Үнэ ихээс бага</option>
-										<option value="2">Үнэ багаас их</option>
-										<!-- <option value="#">Lowest price</option> -->
-									</select>
-								</span>
-								<span>
-									<label>Төрөл</label>
-									<select id="categoriesSelect" name="category">
+				<div class="right-section pull-right">
+					<a href="cart.html" class="cart">
+						<i class="icon-cart"></i>Сагс хоосон байна</a>
+					<a href="#">My Account</a>
+					<a href="#">Logout
+						<small>(John Smith)</small>
+					</a>
+				</div>
+				<!-- .right-section -->
+
+				<div class="main-navigation">
+					<button class="toggle-menu">
+						<i class="fa fa-bars"></i>
+					</button>
+					<ul class="menu">
+						<li class="menu-item home current-menu-item">
+							<a href="index.html">
+								<i class="icon-home"></i>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="products.html">Ном</a>
+						</li>
+						<!-- <li class="menu-item"><a href="products.html">Эрэлт ихтэй ном</a></li> -->
+						<li class="menu-item">
+							<a href="about.html">Бидний тухай</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">Холбоо барих</a>
+						</li>
+
+					</ul>
+					<!-- .menu -->
+					<div class="search-form">
+						<label>
+							<img src="images/icon-search.png">
+						</label>
+						<input type="text" placeholder="Хайлт...">
+					</div>
+					<!-- .search-form -->
+
+					<div class="mobile-navigation"></div>
+					<!-- .mobile-navigation -->
+				</div>
+				<!-- .main-navigation -->
+
+				<div class="breadcrumbs">
+					<div class="container">
+						<a href="index.html">Нүүр</a>
+						<!-- <span>Play Station Games</span> -->
+					</div>
+				</div>
+
+			</div>
+			<!-- .container -->
+		</div>
+		<!-- .site-header -->
+		<main class="main-content">
+			<div class="container">
+				<div class="page">
+					<div class="filter-bar">
+						<div class="filter">
+							<span>
+								<label>Эрэмбэлэх:</label>
+								<select id="sortSelect" name="sort">
+									<option value="1">Үнэ ихээс бага</option>
+									<option value="2">Үнэ багаас их</option>
+									<!-- <option value="#">Lowest price</option> -->
+								</select>
+							</span>
+							<span>
+								<label>Төрөл</label>
+								<select id="categoriesSelect" name="category">
 									<option value="0">Бүгдийг харуулах</option>
-									</select>
-								</span>
-								<span>
-									<label>Харах:</label>
-									<select name="#">
-										<option value="#">8</option>
-										<option value="#">16</option>
-										<option value="#">24</option>
-									</select>
-								</span>
-							</div> <!-- .filter -->
-
-							<div class="pagination">
-								<a href="#" class="page-number"><i class="fa fa-angle-left"></i></a>
-								<span class="page-number current">1</span>
-								<a href="#" class="page-number">2</a>
-								<a href="#" class="page-number">3</a>
-								<a href="#" class="page-number">...</a>
-								<a href="#" class="page-number">12</a>
-								<a href="#" class="page-number"><i class="fa fa-angle-right"></i></a>
-							</div> <!-- .pagination -->
-						</div> <!-- .filter-bar -->
-						
-						<div id="allBooks" class="product-list">
-
-								
-						</div> <!-- .product-list -->
-
-						<div class="pagination-bar">
-							<div class="pagination">
-								<a href="#" class="page-number"><i class="fa fa-angle-left"></i></a>
-								<span class="page-number current">1</span>
-								<a href="#" class="page-number">2</a>
-								<a href="#" class="page-number">3</a>
-								<a href="#" class="page-number">...</a>
-								<a href="#" class="page-number">12</a>
-								<a href="#" class="page-number"><i class="fa fa-angle-right"></i></a>
-							</div> <!-- .pagination -->
+								</select>
+							</span>
+							<span>
+								<label>Харах:</label>
+								<select name="#">
+									<option value="#">8</option>
+									<option value="#">16</option>
+									<option value="#">24</option>
+								</select>
+							</span>
 						</div>
-					</div>
-				</div> <!-- .container -->
-			</main> <!-- .main-content -->
+						<!-- .filter -->
 
-			<div class="site-footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Internom</h3>
-								<ul class="no-bullet">
-									<li><a href="#">Бэстселлэр</a></li>
-									<li><a href="#">Шинэ ном</a></li>
-									<li><a href="#">Арга хэмжээ</a></li>
-									<!-- <li><a href="#">Privacy Policy</a></li>
+						<div class="pagination">
+							<a href="#" class="page-number">
+								<i class="fa fa-angle-left"></i>
+							</a>
+							<span class="page-number current">1</span>
+							<a href="#" class="page-number">2</a>
+							<a href="#" class="page-number">3</a>
+							<a href="#" class="page-number">...</a>
+							<a href="#" class="page-number">12</a>
+							<a href="#" class="page-number">
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+						<!-- .pagination -->
+					</div>
+					<!-- .filter-bar -->
+
+					<div id="allBooks" class="product-list">
+
+
+					</div>
+					<!-- .product-list -->
+
+					<div class="pagination-bar">
+						<div class="pagination">
+							<a href="#" class="page-number">
+								<i class="fa fa-angle-left"></i>
+							</a>
+							<span class="page-number current">1</span>
+							<a href="#" class="page-number">2</a>
+							<a href="#" class="page-number">3</a>
+							<a href="#" class="page-number">...</a>
+							<a href="#" class="page-number">12</a>
+							<a href="#" class="page-number">
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+						<!-- .pagination -->
+					</div>
+				</div>
+			</div>
+			<!-- .container -->
+		</main>
+		<!-- .main-content -->
+
+		<div class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<div class="widget">
+							<h3 class="widget-title">Internom</h3>
+							<ul class="no-bullet">
+								<li>
+									<a href="#">Бэстселлэр</a>
+								</li>
+								<li>
+									<a href="#">Шинэ ном</a>
+								</li>
+								<li>
+									<a href="#">Арга хэмжээ</a>
+								</li>
+								<!-- <li><a href="#">Privacy Policy</a></li>
 									<li><a href="#">Contact</a></li> -->
-								</ul>
-							</div> <!-- .widget -->
-						</div> <!-- column -->
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Бидний тухай</h3>
-								<ul class="no-bullet">
-									<li><a href="#">Бидний тухай</a></li>
-									<li><a href="#">Манай салбарууд</a></li>
-									<li><a href="#">Холбоо бармх</a></li>
-									<li><a href="#">Үйлчилгээний нөхцөл</a></li>
-									
-								</ul>
-							</div> <!-- .widget -->
-						</div> <!-- column -->
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Тусламж</h3>
-								<ul class="no-bullet">
-									<li><a href="#">Захиалга хийх</a></li>
-									<li><a href="#">Төлбөрийн хэрэгслүүд</a></li>
-									
-								</ul>
-							</div> <!-- .widget -->
-						</div> <!-- column -->
-						<!-- <div class="col-md-6">
+							</ul>
+						</div>
+						<!-- .widget -->
+					</div>
+					<!-- column -->
+					<div class="col-md-2">
+						<div class="widget">
+							<h3 class="widget-title">Бидний тухай</h3>
+							<ul class="no-bullet">
+								<li>
+									<a href="#">Бидний тухай</a>
+								</li>
+								<li>
+									<a href="#">Манай салбарууд</a>
+								</li>
+								<li>
+									<a href="#">Холбоо бармх</a>
+								</li>
+								<li>
+									<a href="#">Үйлчилгээний нөхцөл</a>
+								</li>
+
+							</ul>
+						</div>
+						<!-- .widget -->
+					</div>
+					<!-- column -->
+					<div class="col-md-2">
+						<div class="widget">
+							<h3 class="widget-title">Тусламж</h3>
+							<ul class="no-bullet">
+								<li>
+									<a href="#">Захиалга хийх</a>
+								</li>
+								<li>
+									<a href="#">Төлбөрийн хэрэгслүүд</a>
+								</li>
+
+							</ul>
+						</div>
+						<!-- .widget -->
+					</div>
+					<!-- column -->
+					<!-- <div class="col-md-6">
 							<div class="widget">
 								<h3 class="widget-title">Join our newsletter</h3>
 								<form action="#" class="newsletter-form">
@@ -180,188 +245,204 @@
 									<input type="submit" value="Subsribe">
 								</form>
 							</div> <!-- .widget -->
-						</div> <!-- column -->
- -->					</div><!-- .row -->
+				</div>
+				<!-- column -->
+				--> </div>
+			<!-- .row -->
 
-					<div class="colophon">
-						<div class="copy">Copyright 2017 </div>
-						<div class="social-links square">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-							<a href="#"><i class="fa fa-pinterest"></i></a>
-						</div> <!-- .social-links -->
-					</div> <!-- .colophon -->
-				</div> <!-- .container -->
-			</div> <!-- .site-footer -->
+			<div class="colophon">
+				<div class="copy">Copyright 2017 </div>
+				<div class="social-links square">
+					<a href="#">
+						<i class="fa fa-facebook"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-twitter"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-google-plus"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-pinterest"></i>
+					</a>
+				</div>
+				<!-- .social-links -->
+			</div>
+			<!-- .colophon -->
 		</div>
+		<!-- .container -->
+	</div>
+	<!-- .site-footer -->
+	</div>
 
-		<div class="overlay"></div>
+	<div class="overlay"></div>
 
-			<div class="auth-popup popup">
-			<a href="#" class="close"><i class="fa fa-times"></i></a>
-			<div class="row">
-				<div class="col-md-6">
-					<h2 class="section-title">Нэвтрэх</h2>
-					<form action="#">
-						<input type="text" placeholder="Username...">
-						<input type="password" placeholder="Password...">
-						<input type="submit" value="Нэвтрэх">
-					</form>
-				</div> <!-- .column -->
-				<div class="col-md-6">
-					<h2 class="section-title">Бүртгүүлэх</h2>
-					<form id="userCreateForm" action="" enctype="multipart/form-data" method="post">
-						<input type="hidden" name="action" value="create">
-						<input type="text" name="firstName"  placeholder="FirstName...">
-						<input type="text" name="lastName" placeholder="LastName...">
-						<input type="text" name="userName"  placeholder="Username...">
-						<input type="text" name="email"  placeholder="Email address...">
-						<!-- <input type="file" name="pfile" id="pfile"  /> -->
-						<input type="submit" value="Бүртгүүлэх">
-					</form>
-				</div> <!-- .column -->
-			</div> <!-- .row -->
-		</div> <!-- .auth-popup -->
+	<div class="auth-popup popup">
+		<a href="#" class="close">
+			<i class="fa fa-times"></i>
+		</a>
+		<div class="row">
+			<div class="col-md-6">
+				<h2 class="section-title">Нэвтрэх</h2>
+				<form action="#">
+					<input type="text" placeholder="Username...">
+					<input type="password" placeholder="Password...">
+					<input type="submit" value="Нэвтрэх">
+				</form>
+			</div>
+			<!-- .column -->
+			<div class="col-md-6">
+				<h2 class="section-title">Бүртгүүлэх</h2>
+				<form id="userCreateForm" action="" enctype="multipart/form-data" method="post">
+					<input type="hidden" name="action" value="create">
+					<input type="text" name="firstName" placeholder="FirstName...">
+					<input type="text" name="lastName" placeholder="LastName...">
+					<input type="text" name="userName" placeholder="Username...">
+					<input type="text" name="email" placeholder="Email address...">
+					<!-- <input type="file" name="pfile" id="pfile"  /> -->
+					<input type="submit" value="Бүртгүүлэх">
+				</form>
+			</div>
+			<!-- .column -->
+		</div>
+		<!-- .row -->
+	</div>
+	<!-- .auth-popup -->
 
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<script src="js/plugins.js"></script>
-		<script src="js/app.js"></script>
-		<script>
-			$(document).ready(function(){
-				$.ajax({
-			            type: "GET",
-				        url: "services/book.php?",
-				        data: "type=getAllBooks&category="+$("#categoriesSelect").val(),
-				        success: function (data) {
-				        	debugger;
-				        	data = $.parseJSON(data);	
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/app.js"></script>
+	<script>
+		$(document).ready(function () {
+			$.ajax({
+					type: "GET",
+					url: "services/book.php?",
+					data: "type=getAllBooks",
+					success: function (data) {
+						data = $.parseJSON(data);
 
-				        	$.each(data, function(i, item) {
-				        		$("#allBooks").append('<div class="product">'+
-									'<div class="inner-product">'+
-										'<div class="figure-image">'+
-											'<a href="#"><img src="uploads/'+item.image+'"></a>'+
-										'</div>'+
-										'<h3 class="product-title"><a href="#">'+item.name+'</a></h3>'+
-										'<h3 class="product-description"><a href="#">'+item.description+'</a></h3>'+
-										'<a href="#" >Үнэ:'+item.price+'</a>'+
-										'<a href="#" class="button basket-button">Сагсанд нэмэх</a>'+
-										'<a href="single.html" class="button muted">Дэлгэрэнгүй</a>'+
-									'</div>'+
+						$.each(data, function (i, item) {
+							$("#allBooks").append('<div class="product">' +
+								'<div class="inner-product">' +
+								'<div class="figure-image">' +
+								'<a href="#"><img src="uploads/' + item.image + '"></a>' +
+								'</div>' +
+								'<h3 class="product-title"><a href="#">' + item.name + '</a></h3>' +
+								'<h3 class="product-description"><a href="#">' + item.description + '</a></h3>' +
+								'<a href="#" >Үнэ:' + item.price + '</a>' +
+								'<a href="#" class="button basket-button">Сагсанд нэмэх</a>' +
+								'<a href="single.html" class="button muted">Дэлгэрэнгүй</a>' +
+								'</div>' +
 								'</div> ');
-							    console.log(i,item);
-							})
+							console.log(i, item);
+						})
 
-				        }
-			        })
-			        .done(function(data){
-			             
-			        })
-			        .fail(function() {
-			            alert( "Posting failed." );
-			             
-			        });
+					}
+				})
+				.done(function (data) {
 
-			        $.ajax({
-			            type: "GET",
-				        url: "services/book.php?",
-				        data: "type=getCategories",
-				        success: function (data) {
-				        	data = $.parseJSON(data);	
+				})
+				.fail(function () {
+					alert("Failed getAllBooks request.");
 
-				        	$.each(data, function(i, item) {
-				        		$("#categoriesSelect").append('<option value="'+item.id+'">'+item.category_name+'</option>');
-							})
+				});
 
-				        }
-			        }).fail(function() {
-			            alert( "Posting failed." );
-			        });
+			$.ajax({
+				type: "GET",
+				url: "services/book.php?",
+				data: "type=getCategories",
+				success: function (data) {
+					data = $.parseJSON(data);
 
+					$.each(data, function (i, item) {
+						$("#categoriesSelect").append('<option value="' + item.id + '">' + item.category_name + '</option>');
+					})
 
-			        $( "#categoriesSelect" ).change(function() {
-					  $.ajax({
-			            type: "GET",
-				        url: "services/book.php?",
-				        data: "type=ereltbooks&category="+$("#categoriesSelect").val(),
-				        success: function (data) {
-			
-				        	data = $.parseJSON(data);	
-
-							$("#allBooks").html('');
-				        	$.each(data, function(i, item) {
-
-				        		
-				        		$("#allBooks").append('<div class="product">'+
-									'<div class="inner-product">'+
-										'<div class="figure-image">'+
-											'<a href="#"><img src="uploads/'+item.image+'"></a>'+ item.image +
-										'</div>'+
-										'<h3 class="product-title"><a href="#">'+item.name+'</a></h3>'+
-										'<h3 class="product-description"><a href="#">'+item.description+'</a></h3>'+
-										'<a href="#" >Үнэ:'+item.price+'</a>'+
-										'<a href="#" class="button basket-button">Сагсанд нэмэх</a>'+
-										'<a href="#" class="button muted">Дэлгэрэнгүй</a>'+
-									'</div>'+
-								'</div> ');
-							    console.log(i,item);
-							})
-
-				        }
-			        })
-			        .done(function(data){
-			             
-			        })
-			        .fail(function() {
-			            alert( "Posting failed." );
-			             
-			        });
-					});
-
-
-			        $( "#sortSelect" ).change(function() {
-					  $.ajax({
-			            type: "GET",
-				        url: "services/book.php?",
-				        data: "type=sortBooks&sort="+$("#sortSelect").val(),
-				        success: function (data) {
-				        	debugger;
-				        	data = $.parseJSON(data);	
-
-							$("#allBooks").html('');
-				        	$.each(data, function(i, item) {
-
-				        		
-				        		$("#allBooks").append('<div class="product">'+
-									'<div class="inner-product">'+
-										'<div class="figure-image">'+
-												'<a href="#"><img src="uploads/'+item.image+'"></a>'+
-										'</div>'+
-										'<h3 class="product-title"><a href="#">'+item.name+'</a></h3>'+
-										'<h3 class="product-description"><a href="#">'+item.description+'</a></h3>'+
-										'<a href="#" >Үнэ:'+item.price+'</a>'+
-										'<a href="#" class="button basket-button">Сагсанд нэмэх</a>'+
-										'<a href="#" class="button muted">Дэлгэрэнгүй</a>'+
-									'</div>'+
-								'</div> ');
-							    console.log(i,item);
-							})
-
-				        }
-			        })
-			        .done(function(data){
-			             
-			        })
-			        .fail(function() {
-			            alert( "Posting failed." );
-			             
-			        });
-					});
-		
+				}
+			}).fail(function () {
+				alert("Failed getCategories request");
 			});
-		</script>
-		
-	</body>
+		});
+
+		$("#categoriesSelect").change(function () {
+			$.ajax({
+					type: "GET",
+					url: "services/book.php?",
+					data: "type=ereltbooks&category=" + $("#categoriesSelect").val(),
+					success: function (data) {
+
+						data = $.parseJSON(data);
+
+						$("#allBooks").html('');
+						$.each(data, function (i, item) {
+
+
+							$("#allBooks").append('<div class="product">' +
+								'<div class="inner-product">' +
+								'<div class="figure-image">' +
+								'<a href="#"><img src="uploads/' + item.image + '"></a>' + item.image +
+								'</div>' +
+								'<h3 class="product-title"><a href="#">' + item.name + '</a></h3>' +
+								'<h3 class="product-description"><a href="#">' + item.description + '</a></h3>' +
+								'<a href="#" >Үнэ:' + item.price + '</a>' +
+								'<a href="#" class="button basket-button">Сагсанд нэмэх</a>' +
+								'<a href="#" class="button muted">Дэлгэрэнгүй</a>' +
+								'</div>' +
+								'</div> ');
+							console.log(i, item);
+						})
+
+					}
+				})
+				.done(function (data) {
+
+				})
+				.fail(function () {
+					alert("Posting failed.");
+
+				});
+		});
+
+
+		$("#sortSelect").change(function () {
+			$.ajax({
+					type: "GET",
+					url: "services/book.php?",
+					data: "type=sortBooks&sort=" + $("#sortSelect").val(),
+					success: function (data) {
+						data = $.parseJSON(data);
+
+						$("#allBooks").html('');
+						$.each(data, function (i, item) {
+
+
+							$("#allBooks").append('<div class="product">' +
+								'<div class="inner-product">' +
+								'<div class="figure-image">' +
+								'<a href="#"><img src="uploads/' + item.image + '"></a>' +
+								'</div>' +
+								'<h3 class="product-title"><a href="#">' + item.name + '</a></h3>' +
+								'<h3 class="product-description"><a href="#">' + item.description + '</a></h3>' +
+								'<a href="#" >Үнэ:' + item.price + '</a>' +
+								'<a href="#" class="button basket-button">Сагсанд нэмэх</a>' +
+								'<a href="#" class="button muted">Дэлгэрэнгүй</a>' +
+								'</div>' +
+								'</div> ');
+							console.log(i, item);
+						})
+
+					}
+				})
+				.done(function (data) {
+
+				})
+				.fail(function () {
+					alert("Posting failed.");
+
+				});
+		});
+	</script>
+
+</body>
 
 </html>
